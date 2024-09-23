@@ -13,6 +13,7 @@ En esta prueba se evaluarán los conocimientos del candidato para el desarrollo 
 - Crear una nueva rama con el formato `nombre`-`prueba`(ej. `david-frontend`, `lucas-frontend`, etc.)
 - Desarrollar el proyecto
   - El proyecto consiste en un aplicativo web para gestionar productos y órdenes.
+  - Para las consultas del proyecto se puede utilizar REST o GraphQL (GraphQL es lo que se utiliza en AppliQloud)
   - Hay dos tipos de roles de usuarios, `ADMIN` y `USER`.
   - La aplicación de productos debe permitir las operaciones de creación, modificación, lectura, borrado, activación y desactivación de productos.
     - REST
