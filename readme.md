@@ -14,6 +14,7 @@ En esta prueba se evaluarán los conocimientos del candidato para el desarrollo 
 - Desarrollar el proyecto
   - El proyecto consiste en un aplicativo web para gestionar productos y órdenes.
   - Para las consultas del proyecto se puede utilizar REST o GraphQL (GraphQL es lo que se utiliza en AppliQloud)
+    - Las consultas se harán a la url `https://interview.appliqloud.com` 
   - Hay dos tipos de roles de usuarios, `ADMIN` y `USER`.
   - La aplicación de productos debe permitir las operaciones de creación, modificación, lectura, borrado, activación y desactivación de productos.
     - REST
@@ -58,7 +59,7 @@ En esta prueba se evaluarán los conocimientos del candidato para el desarrollo 
        - `cancelOrder`
   - Los usuarios `ADMIN` deben de poder ver todas las órdenes existentes, además de poder marcar una órden como recibida o cancelarla.
   - Los usuarios `USER` deben de poder ver solo las órdenes que ellos crearon, crear nuevas órdenes o cancelar una órden.
-  - El login se hace a través de OAuth2, mandando una petición `POST` al endpoint `/`, enviando el usuario y contraseña y recibiendo como respuesta un token de acceso.
+  - El login se hace a través de OAuth2, mandando una petición `POST` al endpoint `/users/token`, enviando el usuario y contraseña y recibiendo como respuesta un token de acceso.
   - Este token de acceso vence a los 15 minutos y se envia en el header `Authorization` bajo el esquema `Bearer Token` en todas las demás peticiones.
   - En caso de que el token haya vencido, hay que redireccionar al usuario al login
   - El layout y la estética general del aplicativo quedan a discreción del candidato.
