@@ -1,67 +1,46 @@
-# Proyecto de prueba de AppliQloud
+# Getting Started with Create React App
 
-Los candidatos a formar parte del equipo de desarrollo de AppliQloud deberán elaborar un proyecto de prueba en donde utilicen sus conocimientos y su experiencia para desarrollar un aplicativo web.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Prueba de frontend
+## Available Scripts
 
-En esta prueba se evaluarán los conocimientos del candidato para el desarrollo frontend, desde el diseño visual del aplicativo, hasta el correcto funcionamiento de la lógica de negocio.
+In the project directory, you can run:
 
-### Pasos a seguir
+### `yarn start`
 
-- Forkear este repositorio (solo la rama `main`)
-- Clonar el fork en el entorno local
-- Crear una nueva rama con el formato `nombre`-`prueba`(ej. `david-frontend`, `lucas-frontend`, etc.)
-- Desarrollar el proyecto
-  - El proyecto consiste en un aplicativo web para gestionar productos y órdenes.
-  - Para las consultas del proyecto se puede utilizar REST o GraphQL (GraphQL es lo que se utiliza en AppliQloud)
-    - Las consultas se harán a la url `https://interview.appliqloud.com` 
-  - Hay dos tipos de roles de usuarios, `ADMIN` y `USER`.
-  - La aplicación de productos debe permitir las operaciones de creación, modificación, lectura, borrado, activación y desactivación de productos.
-    - REST
-      - `GET /products/count`
-      - `GET /products`
-      - `GET /products/{id}`
-      - `POST /products`
-      - `PUT /products/{id}`
-      - `PUT /products/deactivate/{id}`
-      - `PUT /products/activate/{id}`
-      - `DELETE /products/{id}`
-   - GraphQL (`/graphql`)
-     - Queries
-       - `countProducts`
-       - `findProducts`
-       - `findProductById`
-     - Mutations
-       - `createProduct`
-       - `updateProduct`
-       - `deactivateProduct`
-       - `activateProduct`
-       - `deleteProduct`
-  - Los usuarios `ADMIN` deberian tener acceso a todas las acciones de la aplicación de órdenes.
-  - Los usuarios `USER` deberan tambien ver esta aplicación, pero con una vista de solo lectura, bloqueando las demas acciones
-  - La aplicación de órdenes permite crear órdenes en base a productos existentes.
-    - REST
-      - `GET /orders/count`
-      - `GET /orders`
-      - `GET /orders/{id}`
-      - `POST /orders`
-      - `PUT /orders/mark-as-received/{id}`
-      - `PUT /orders/cancel/{id}`
-   - GraphQL (`/graphql`)
-     - Queries
-       - `countOrders`
-       - `findOrders`
-       - `findOrdersById`
-       - `findAllOrders`
-     - Mutations
-       - `createOrder`
-       - `markOrderAsReceived`
-       - `cancelOrder`
-  - Los usuarios `ADMIN` deben de poder ver todas las órdenes existentes, además de poder marcar una órden como recibida o cancelarla.
-  - Los usuarios `USER` deben de poder ver solo las órdenes que ellos crearon, crear nuevas órdenes o cancelar una órden.
-  - El login se hace a través de OAuth2, mandando una petición `POST` al endpoint `/users/token`, enviando el usuario y contraseña y recibiendo como respuesta un token de acceso.
-  - Este token de acceso vence a los 15 minutos y se envia en el header `Authorization` bajo el esquema `Bearer Token` en todas las demás peticiones.
-  - En caso de que el token haya vencido, hay que redireccionar al usuario al login
-  - El layout y la estética general del aplicativo quedan a discreción del candidato.
-- Publicar la rama local en el fork de GitHub
-- Enviar un pull request del fork a la rama `main` del repositorio padre
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
